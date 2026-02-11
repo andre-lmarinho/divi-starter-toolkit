@@ -1,16 +1,8 @@
 # Divi Starter Toolkit
 
-A collection of drop-in UI components, Divi theme fixes, and WordPress utility snippets. Built for WordPress sites running the Divi theme — no build step required.
+A collection of Divi theme fixes and WordPress utility snippets. Built for WordPress sites running the Divi theme — no build step required.
 
-## Components
-
-| Component | Description | Tech |
-|---|---|---|
-| [Logo Carousel](components/logo-carousel/) | Infinite scrolling logo carousel with hover pause | Vanilla JS + CSS |
-| [Feature Carousel](components/feature-carousel/) | Pointer-driven feature preview with synced imagery | Vanilla JS + CSS |
-| [Card Hover Effect](components/card-hover-effect/) | Pointer-tracking card translation animation | Vanilla JS + CSS |
-| [Content Toggle](components/content-toggle/) | Tab-like interface for showing/hiding content blocks | jQuery + CSS |
-| [Chip Navigation](components/chip-navigation/) | Horizontal chip bar with scroll-sync and keyboard nav | Vanilla JS + CSS |
+> **Looking for standalone UI components?** They have been extracted into their own repository: [icodethis-challenges](https://github.com/andre-lmarinho/icodethis-challenges)
 
 ## Divi Fixes
 
