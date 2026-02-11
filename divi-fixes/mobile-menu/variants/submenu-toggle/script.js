@@ -3,8 +3,8 @@
  *
  * Purpose: Adds toggle controls, hover effects, and CTA class handling for `.et_mobile_menu` elements deployed on `Divi Starter Toolkit` sites.
  * Usage context: Include on Divi sites that rely on the default mobile menu markup.
- * Author: André Marinho.
- * Website: andremarinho.me.
+ * Author: André Marinho
+ * Website: andremarinho.me
  * Version: 1.0.1
  *
  * @package DST_Fix_To_Divi_Menu

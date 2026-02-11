@@ -3,8 +3,8 @@
  *
  * Purpose: Handles the hamburger animation and slide-in menu visibility on mobile devices.
  * Usage context: Attach to pages that include the `#slide-in-open` trigger and `.slide-in-menu-container` wrapper.
- * Author: André Marinho.
- * Website: andremarinho.me.
+ * Author: André Marinho
+ * Website: andremarinho.me
  * Version: 1.0.1
  *
  * @package DST_Menu_001

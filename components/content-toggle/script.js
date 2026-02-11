@@ -3,8 +3,8 @@
  *
  * Purpose: Shows one content block at a time based on matching `.ct-button_X` and `.ct-element_X` selectors.
  * Usage context: Attach to pages where Divi modules use the prescribed button and content class naming pattern.
- * Author: André Marinho.
- * Website: andremarinho.me.
+ * Author: André Marinho
+ * Website: andremarinho.me
  * Version: 1.0.1
  *
  * @package DST_Multi_Content_Toggle

@@ -3,8 +3,8 @@
  *
  * Purpose: Adds smooth translations that follow the cursor to emphasise key elements.
  * Usage context: Apply to modules with the `.js-hover-move` class within Divi layouts.
- * Author: André Marinho.
- * Website: andremarinho.me.
+ * Author: André Marinho
+ * Website: andremarinho.me
  * Version: 1.0.1
  *
  * @package DST_Card_Hover_Effect

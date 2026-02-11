@@ -3,8 +3,8 @@
  *
  * Purpose: Mirrors the React marketing component inside Divi layouts using a minimal JS enhancement.
  * Usage context: Paste the HTML wrapper via a Divi Code module and enqueue this script globally.
- * Author: André Marinho.
- * Website: andremarinho.me.
+ * Author: André Marinho
+ * Website: andremarinho.me
  * Version: 1.1.0
  *
  * @package DST_Home_Solutions

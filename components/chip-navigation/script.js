@@ -3,8 +3,8 @@
  *
  * Purpose: Converts chip-style modules into accessible navigation with smooth scrolling.
  * Usage context: Apply to pages where `.chipbar` containers map to `.menu-category` sections.
- * Author: André Marinho.
- * Website: andremarinho.me.
+ * Author: André Marinho
+ * Website: andremarinho.me
  * Version: 1.1.0
  *
  * @package DST_Cardapio_Menu

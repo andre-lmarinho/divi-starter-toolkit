@@ -3,8 +3,8 @@
  *
  * Purpose: Collects global utilities and Divi fixes reused across `Divi Starter Toolkit` implementations.
  * Usage context: Load through the child theme stylesheet or Divi Theme Options > Custom CSS.
- * Author: André Marinho.
- * Website: andremarinho.me.
+ * Author: André Marinho
+ * Website: andremarinho.me
  * Version: 1.0.0
  *
  * @package DST_Theme

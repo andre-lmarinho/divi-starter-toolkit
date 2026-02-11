@@ -3,8 +3,8 @@
  *
  * Purpose: Deliver a continuously looping client logo strip that slows on hover for readability.
  * Usage context: Embed the markup in a Divi Code module and enqueue this script globally.
- * Author: André Marinho.
- * Website: andremarinho.me.
+ * Author: André Marinho
+ * Website: andremarinho.me
  * Version: 1.0.0
  *
  * @package DST_Logo_Carousel
