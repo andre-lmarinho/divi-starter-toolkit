@@ -1,0 +1,49 @@
+/**
+ * Theme-wide CSS adjustments for `Divi Starter Toolkit`.
+ *
+ * Purpose: Finetunning to Divi Components.
+ * Usage context: Load through the module customize CSS.
+ * Author: André Marinho.
+ * Website: andremarinho.me.
+ * Version: 1.0.0
+ *
+ * @package DST_Theme
+ */
+
+/* Fix hover animation for footer icon */
+.selector .et_pb_icon .et_pb_icon_wrap {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 9999px;
+  overflow: hidden;
+  background: radial-gradient(circle at top left, #2ea3f2 0%, #176db3 100%);
+}
+
+.selector .et_pb_icon .et_pb_icon_wrap .et-pb-icon {
+  position: relative;
+  z-index: 2;
+}
+
+.selector .et_pb_icon .et_pb_icon_wrap .box-shadow-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.selector .et_pb_icon .et_pb_icon_wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: radial-gradient(circle at top left, #176db3 0%, #176db3 100%);
+  opacity: 0;
+  transition: opacity 250ms ease-out;
+  pointer-events: none;
+}
+
+.selector .et_pb_icon a:hover .et_pb_icon_wrap::after,
+.et_pb_icon .et_pb_icon_wrap:hover::after {
+  opacity: 1;
+}

@@ -1,0 +1,73 @@
+/**
+ * Theme-wide CSS adjustments for `Divi Starter Toolkit`.
+ *
+ * Purpose: Collects global utilities and Divi fixes reused across `Divi Starter Toolkit` implementations.
+ * Usage context: Load through the child theme stylesheet or Divi Theme Options > Custom CSS.
+ * Author: André Marinho.
+ * Website: andremarinho.me.
+ * Version: 1.0.0
+ *
+ * @package DST_Theme
+*/
+
+/* -------- Divi Starter Toolkit Elements -------- */
+
+/* Vertical line accent between sections */
+.espsec:before {
+  content: '';
+  position: absolute;
+  top: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 64px;
+  background: linear-gradient(to bottom, #2ea3f2 0%, #176db3 100%);
+}
+
+/* Default shadow utility */
+.shadowgrey {
+  box-shadow:
+    0 8px 60px 0 rgba(12, 40, 70, 0.11),
+    0 12px 90px 0 rgba(12, 40, 70, 0.11);
+  padding: 32px;
+  border-radius: 8px;
+}
+
+/* Full center Blurb with class u-fit */
+.et_pb_column .et_pb_module.u-fit {
+  width: max-content;
+  max-width: 100%;
+  float: none;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+@media (min-width: 981px) {
+  .et_pb_column .et_pb_module.u-fit {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+/* CTA Menu */
+.cta-menu a {
+  background-image: linear-gradient(135deg, #2ea3f2 0%, #176db3 100%);
+  background-color: #176db3;
+  border-width: 1px !important;
+  border-color: #e8ecef;
+  border-radius: 0.3rem;
+  color: #fff !important;
+  text-align: center;
+  margin: auto;
+}
+
+@media (min-width: 981px) {
+  .cta-menu a {
+    margin-left: 1rem !important;
+  }
+}
+
+.cta-menu a:hover {
+  background-image: linear-gradient(135deg, #176db3 0%, #176db3 100%);
+  opacity: 1 !important;
+}

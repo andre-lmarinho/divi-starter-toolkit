@@ -1,0 +1,74 @@
+/**
+ * Theme-wide CSS adjustments for `Divi Starter Toolkit`.
+ *
+ * Purpose: Finetunning to Divi Contact Form Module.
+ * Usage context: Load through the module customize CSS.
+ * Author: André Marinho.
+ * Website: andremarinho.me.
+ * Version: 1.0.0
+ *
+ * @package DST_Theme
+ */
+
+/* Base: main container */
+.et_pb_contact_form_container .et_pb_contact_field {
+  position: relative;
+}
+
+/* Base: text color, border, transitions */
+.et_pb_contact_form .et_pb_contact_field .input {
+  border: 1px solid transparent;
+  color: #20292f !important;
+  outline: 0;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    color 0.2s ease;
+}
+
+/* Hover/Focus: blue border */
+.et_pb_contact_form .et_pb_contact_field .input:hover,
+.et_pb_contact_form .et_pb_contact_field .input:focus,
+.et_pb_contact_form .et_pb_contact_field .input:focus-visible {
+  border-color: #2ea3f2 !important;
+}
+
+/* Floating label: hidden by default; shown on focus */
+.et_pb_contact_form_label {
+  display: inline;
+  position: absolute;
+  top: -1.6em;
+  color: #2ea3f2;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.2em;
+  text-align: left;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.et_pb_contact_field:focus-within .et_pb_contact_form_label {
+  opacity: 1;
+}
+
+/* Placeholder: fade out on focus or when filled */
+.et_pb_contact_form .et_pb_contact_field .input::placeholder {
+  transition: opacity 0.2s ease;
+}
+.et_pb_contact_form .et_pb_contact_field .input:focus::placeholder,
+.et_pb_contact_form .et_pb_contact_field .input:not(:placeholder-shown)::placeholder {
+  opacity: 0;
+}
+
+/* Keep the message field from exceeding its parent */
+.et_pb_contact_form .et_pb_contact_field textarea.input {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  resize: vertical;
+  max-height: 60vh;
+}
+/* If the parent uses flex, ensure children can shrink within it */
+.et_pb_contact_form .et_pb_contact_field {
+  min-width: 0;
+}

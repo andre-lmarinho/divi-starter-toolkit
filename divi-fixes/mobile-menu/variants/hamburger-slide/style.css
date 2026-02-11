@@ -1,0 +1,69 @@
+/**
+ * Styling for the Divi mobile menu toggle interaction.
+ *
+ * Purpose: Provides the hamburger icon animation and slide-in transitions for mobile navigation.
+ * Usage context: Include alongside `Script.js` on pages that expose the `.slide-in-menu-container` markup.
+ * Author: André Marinho.
+ * Website: andremarinho.me.
+ * Version: 1.0.1
+ *
+ * @package DST_Menu_001
+ */
+#slide-in-open {
+  cursor: pointer;
+}
+
+.line {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: #24394a;
+  border-radius: 9px;
+  opacity: 1;
+  -webkit-transition: 0.1s ease-in-out;
+  -moz-transition: 0.1s ease-in-out;
+  -o-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+}
+
+.line-2 {
+  top: 10px;
+}
+
+.line-3 {
+  top: 20px;
+}
+
+#slide-in-open.open .line-1 {
+  top: 10px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+#slide-in-open.open .line-2 {
+  display: none;
+}
+
+#slide-in-open.open .line-3 {
+  top: 10px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+.slide-in-menu {
+  right: 0 !important;
+  opacity: 1 !important;
+}
+
+.slide-in-menu-container {
+  -webkit-transition: all 0.5s ease !important;
+  -moz-transition: all 0.5s ease !important;
+  -o-transition: all 0.5s ease !important;
+  -ms-transition: all 0.5s ease !important;
+  transition: all 0.5s ease !important;
+}

@@ -1,0 +1,20 @@
+/**
+ * Styles for interactive card hover movements.
+ *
+ * Purpose: Provides performance hints and optional hover shadows for `.js-hover-move` elements.
+ * Usage context: Pair with the JavaScript hover effect to enhance Divi cards or CTAs.
+ * Author: André Marinho.
+ * Website: andremarinho.me.
+ * Version: 1.0.1
+ *
+ * @package DST_Card_Hover_Effect
+ */
+.js-hover-move {
+  will-change: transform;
+}
+
+.js-hover-move:hover {
+  box-shadow:
+    0 8px 60px 0 rgba(12, 40, 70, 0.22),
+    0 12px 90px 0 rgba(12, 40, 70, 0.22);
+}

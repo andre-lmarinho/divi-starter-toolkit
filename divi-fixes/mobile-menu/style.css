@@ -1,0 +1,186 @@
+
+/* -------- Divi Resets and Fixes -------- */
+
+/* Fix for blurb icon padding */
+.et_pb_blurb_position_left .et_pb_blurb_container {
+  padding-left: 0 !important;
+}
+
+/* Fix for header menu module */
+.et_pb_menu--with-logo .et_pb_menu__menu > nav > ul > li > a {
+  padding: 1.25rem 1rem 1rem !important;
+}
+
+.et_pb_menu .et-menu {
+  margin: auto !important;
+}
+
+.et_pb_menu .et-menu > li {
+  padding: 0 !important;
+}
+
+.et-menu li li a {
+  padding: 6px 16px !important;
+}
+
+.et_pb_menu .nav li ul {
+  margin-top: 4px;
+}
+
+.menu-item-has-children {
+  margin-right: 11px !important;
+}
+
+/* Fix for mobile menu icon */
+.mobile_menu_bar::before {
+  display: block;
+  transition: transform 0.4s ease;
+  transform: rotate(0deg);
+}
+
+.mobile_nav.opened .mobile_menu_bar::before {
+  content: '\4d';
+  transform: rotate(90deg);
+}
+
+/*Mobile Sub-Menus */
+@media (min-width: 980px) {
+  .sub-menu:before {
+    background: #fff;
+    border-radius: 6px;
+    content: '';
+    display: block;
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    top: -2px;
+    left: 45px;
+    transform: rotate(45deg) translateX(-70%);
+    z-index: 9;
+  }
+}
+
+.sub-menu {
+  border-radius: 5px;
+  filter: drop-shadow(0 8px 10px rgba(14, 40, 70, 0.1))
+    drop-shadow(0 12px 20px rgba(14, 40, 70, 0.1));
+}
+
+/* Mobile menu toggles and submenu behaviour */
+:is(ul.et_mobile_menu, .et-db #et-boc .et-l ul.et_mobile_menu)
+  li:is(.menu-item-has-children, .page_item_has_children) {
+  position: relative;
+}
+
+:is(ul.et_mobile_menu, .et-db #et-boc .et-l ul.et_mobile_menu)
+  li:is(.menu-item-has-children, .page_item_has_children)
+  > a {
+  background-color: transparent;
+}
+
+:is(ul.et_mobile_menu, .et-db #et-boc .et-l ul.et_mobile_menu)
+  li:is(.menu-item-has-children, .page_item_has_children)
+  .mobile-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  max-height: 44px;
+  padding: 0 10px 10px 0 !important;
+  border: none;
+  background-color: transparent;
+  z-index: 999;
+  text-align: right;
+  opacity: 1;
+}
+
+:is(ul.et_mobile_menu, .et-db #et-boc .et-l ul.et_mobile_menu)
+  li.menu-item-has-children
+  .mobile-toggle::after {
+  position: relative;
+  top: 10px;
+  padding: 3px;
+  font-family: 'ETModules';
+  content: '\33';
+  color: #2ea3f2;
+  background: #f0f3f6;
+  border-radius: 50%;
+}
+
+:is(ul.et_mobile_menu, .et-db #et-boc .et-l ul.et_mobile_menu)
+  li.menu-item-has-children.dt-open
+  > .mobile-toggle::after {
+  content: '\32';
+}
+
+:is(ul.et_mobile_menu, .et-db #et-boc .et-l ul.et_mobile_menu) li.menu-item-has-children .sub-menu {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+:is(ul.et_mobile_menu, .et-db #et-boc .et-l ul.et_mobile_menu)
+  li.menu-item-has-children
+  .sub-menu.visible {
+  display: block !important;
+  visibility: visible !important;
+}
+
+/*add point on top of the menu submenu dropdown*/
+.et_pb_menu_0.et_pb_menu .et_mobile_menu:after {
+  position: absolute;
+  right: 5%;
+  margin-left: -20px;
+  top: -14px;
+  width: 0;
+  height: 0;
+  content: '';
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid #ffffff;
+}
+
+/*adjust the position of the hamburger menu*/
+.mobile_menu_bar {
+  position: relative;
+  display: block;
+  line-height: 0;
+}
+
+/*force the background color and add a rounded border*/
+.et_pb_menu_0.et_pb_menu .et_mobile_menu,
+.et_pb_menu_0.et_pb_menu .et_mobile_menu ul {
+  background-color: #ffffff !important;
+  border-radius: 10px;
+}
+
+.pa-block {
+  display: block !important;
+  height: fit-content !important;
+  padding: 5% !important;
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.et_mobile_menu {
+  padding: 2% !important;
+}
+
+.et_mobile_menu .menu-item-has-children .pa-submenu {
+  display: block !important;
+}
+
+.opened .et_mobile_menu {
+  width: 100%;
+  height: 100dvh;
+}
+
+.et_mobile_menu li a {
+  border-bottom: none !important;
+  padding: 10px 10px !important;
+}
+
+.et_mobile_menu li li {
+  padding-left: 0 !important;
+}

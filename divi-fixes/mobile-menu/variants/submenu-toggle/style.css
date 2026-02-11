@@ -1,0 +1,229 @@
+/**
+ * CSS refinements for Divi mobile menu interactions.
+ *
+ * Purpose: Styles CTA buttons, submenu toggles, and the hamburger transition for the `Divi Starter Toolkit` menu adjustments.
+ * Usage context: Load alongside the JavaScript enhancements for the same implementation.
+ * Author: André Marinho.
+ * Website: andremarinho.me.
+ * Version: 1.0.1
+ *
+ * @package DST_Fix_To_Divi_Menu
+ */
+/*change hamburger menu to X*/
+.mobile_nav.opened .mobile_menu_bar:before {
+  content: '\4d';
+}
+
+/*rotate the Menu icon on click*/
+.mobile_menu_bar:before {
+  transition: all 0.4s ease;
+  transform: rotate(0deg);
+  display: block;
+}
+
+/*rotate the Menu icon on click*/
+.mobile_nav.opened .mobile_menu_bar::before {
+  transition: all 0.4s ease;
+  transform: rotate(90deg);
+  display: block;
+}
+
+/* CTA Menu */
+.cta-menu a {
+  background-color: #10e375;
+  background-image: linear-gradient(180deg, #006b76 0%, #00b392 100%);
+  padding: 8px 32px !important;
+  border-radius: 8px;
+  margin-top: 24px;
+  color: #fff !important;
+  text-align: center;
+  transition: transform 300ms ease 0ms;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-duration: 0.2s;
+  animation-duration: 0.2s;
+}
+
+@media (min-width: 980px) {
+  .cta-menu a {
+    margin: 16px 10px 16px 24px;
+  }
+}
+
+.cta-menu a:hover {
+  box-shadow: 0 12px 24px -6px rgba(12, 40, 70, 0.16);
+  color: #fff !important;
+  transform: translate(0px, -2px);
+}
+
+/*Mobile Sub-Menus */
+@media (min-width: 1149px) {
+  .sub-menu:before {
+    background: #fff;
+    border-radius: 6px;
+    content: '';
+    display: block;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: -2px;
+    left: 45px;
+    transform: rotate(45deg) translateX(-70%);
+    z-index: 9;
+  }
+}
+
+.sub-menu {
+  border-radius: 5px;
+  filter: drop-shadow(0 8px 10px rgba(14, 40, 70, 0.1))
+    drop-shadow(0 12px 20px rgba(14, 40, 70, 0.1));
+}
+
+/*adjust the new toggle element which is added via jQuery*/
+ul.et_mobile_menu li.menu-item-has-children .mobile-toggle,
+ul.et_mobile_menu li.page_item_has_children .mobile-toggle,
+.et-db #et-boc .et-l ul.et_mobile_menu li.menu-item-has-children .mobile-toggle,
+.et-db #et-boc .et-l ul.et_mobile_menu li.page_item_has_children .mobile-toggle {
+  width: 44px;
+  height: 100%;
+  padding: 0 10px 10px 0 !important;
+  max-height: 44px;
+  border: none;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  z-index: 999;
+  background-color: transparent;
+}
+
+/*some code to keep everyting positioned properly*/
+ul.et_mobile_menu > li.menu-item-has-children,
+ul.et_mobile_menu > li.page_item_has_children,
+ul.et_mobile_menu > li.menu-item-has-children .sub-menu li.menu-item-has-children,
+.et-db #et-boc .et-l ul.et_mobile_menu > li.menu-item-has-children,
+.et-db #et-boc .et-l ul.et_mobile_menu > li.page_item_has_children,
+.et-db
+  #et-boc
+  .et-l
+  ul.et_mobile_menu
+  > li.menu-item-has-children
+  .sub-menu
+  li.menu-item-has-children {
+  position: relative;
+}
+
+/*remove default background color from menu items that have children*/
+.et_mobile_menu .menu-item-has-children > a,
+.et-db #et-boc .et-l .et_mobile_menu .menu-item-has-children > a {
+  background-color: transparent;
+}
+
+/*hide the submenu by default*/
+ul.et_mobile_menu .menu-item-has-children .sub-menu,
+#main-header ul.et_mobile_menu .menu-item-has-children .sub-menu,
+.et-db #et-boc .et-l ul.et_mobile_menu .menu-item-has-children .sub-menu,
+.et-db #main-header ul.et_mobile_menu .menu-item-has-children .sub-menu {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/*show the submenu when toggled open*/
+ul.et_mobile_menu .menu-item-has-children .sub-menu.visible,
+#main-header ul.et_mobile_menu .menu-item-has-children .sub-menu.visible,
+.et-db #et-boc .et-l ul.et_mobile_menu .menu-item-has-children .sub-menu.visible,
+.et-db #main-header ul.et_mobile_menu .menu-item-has-children .sub-menu.visible {
+  display: block !important;
+  visibility: visible !important;
+}
+
+/*adjust the toggle icon position and transparency*/
+ul.et_mobile_menu li.menu-item-has-children .mobile-toggle,
+.et-db #et-boc .et-l ul.et_mobile_menu li.menu-item-has-children .mobile-toggle {
+  text-align: center;
+  opacity: 1;
+}
+
+/*submenu toggle icon when closed*/
+ul.et_mobile_menu li.menu-item-has-children .mobile-toggle::after,
+.et-db #et-boc .et-l ul.et_mobile_menu li.menu-item-has-children .mobile-toggle::after {
+  top: 10px;
+  position: relative;
+  font-family: 'ETModules';
+  content: '\33';
+  color: #00d263;
+  background: #f0f3f6;
+  border-radius: 50%;
+  padding: 3px;
+}
+
+/*submenu toggle icon when open*/
+ul.et_mobile_menu li.menu-item-has-children.dt-open > .mobile-toggle::after,
+.et-db #et-boc .et-l ul.et_mobile_menu li.menu-item-has-children.dt-open > .mobile-toggle::after {
+  content: '\32';
+}
+
+/*add point on top of the menu submenu dropdown*/
+.et_pb_menu_0.et_pb_menu .et_mobile_menu:after {
+  position: absolute;
+  right: 5%;
+  margin-left: -20px;
+  top: -14px;
+  width: 0;
+  height: 0;
+  content: '';
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid #ffffff;
+}
+
+/*adjust the position of the hamburger menu*/
+.mobile_menu_bar {
+  position: relative;
+  display: block;
+  line-height: 0;
+}
+
+/*force the background color and add a rounded border*/
+.et_pb_menu_0.et_pb_menu .et_mobile_menu,
+.et_pb_menu_0.et_pb_menu .et_mobile_menu ul {
+  background-color: #ffffff !important;
+  border-radius: 10px;
+}
+
+.et_mobile_menu .menu-item-has-children .sub-menu {
+  display: none !important;
+}
+
+.pa-block {
+  display: block !important;
+  height: fit-content !important;
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  padding: 5% !important;
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
+}
+
+.et_mobile_menu .menu-item-has-children .pa-submenu {
+  display: block !important;
+}
+
+.opened .et_mobile_menu {
+  width: 100%;
+  height: 100vh;
+}
+
+.et_mobile_menu li a {
+  border-bottom: none !important;
+  padding: 10px 10px !important;
+}
+
+.et_mobile_menu li li {
+  padding-left: 0 !important;
+}
+
+ul.et_mobile_menu li.menu-item-has-children .mobile-toggle,
+.et-db #et-boc .et-l ul.et_mobile_menu li.menu-item-has-children .mobile-toggle {
+  text-align: right;
+  width: 100%;
+}
