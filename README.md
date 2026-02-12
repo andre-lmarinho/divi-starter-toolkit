@@ -2,7 +2,7 @@
 
 A collection of Divi theme fixes and WordPress utility snippets. Built for WordPress sites running the Divi theme — no build step required.
 
-> **Looking for standalone UI components?** They have been extracted into their own repository: [icodethis-challenges](https://github.com/andre-lmarinho/icodethis-challenges)
+> **Looking for standalone UI components?** They have been extracted into their own repository: [ui-components-library](https://github.com/andre-lmarinho/ui-components-library)
 
 ## Divi Fixes
 
